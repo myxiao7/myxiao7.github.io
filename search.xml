@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>自定义View—综述</title>
+      <link href="/2019/03/26/zi-ding-yi-view-ji-chu-pian/"/>
+      <url>/2019/03/26/zi-ding-yi-view-ji-chu-pian/</url>
+      
+        <content type="html"><![CDATA[<ul><li><p>自定义绘制的方式主要是重写绘制方法，常用的就是onDraw()</p></li><li><p>关键点在于Canvas的使用，包括Paint和canvas.draw…</p></li></ul><h5 id="自定义绘制的四个级别"><a href="#自定义绘制的四个级别" class="headerlink" title="自定义绘制的四个级别"></a>自定义绘制的四个级别</h5><p>将自定义绘制分为四个级别来学习：</p><ul><li>Canvas的drawXX()方法</li></ul><p>Canvas的drawXX()方法是自定义绘制的基本，主要包括如何画线、形状、文字等，配合Paint的一些基本设置（颜色、线条风格等）就可以满足最基本的挥之需求；</p><ul><li>Paint的使用</li></ul><p>Paint的作用很多，常用的包括控制颜色、线条粗细、实心空心、阴影等效果；</p><ul><li><p>Canvas对绘制的辅助—范围裁切和几何变换</p></li><li><p>控制绘制的顺序</p></li></ul><p>#### </p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Android 自定义 View </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>如何利用Github Pages搭建个人博客</title>
+      <link href="/2019/02/27/ru-he-li-yong-github-pages-da-jian-ge-ren-bo-ke/"/>
+      <url>/2019/02/27/ru-he-li-yong-github-pages-da-jian-ge-ren-bo-ke/</url>
+      
+        <content type="html"><![CDATA[<p>前期准备：github账号：<a href="https://github.com/" target="_blank" rel="noopener">https://github.com/</a></p><p>​        github客户端：</p><p>​        git：</p><p>​        </p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hello World</title>
+      <link href="/2019/02/27/hello-world/"/>
+      <url>/2019/02/27/hello-world/</url>
+      
+        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class=" language-bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span></code></pre><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class=" language-bash"><code class="language-bash">$ hexo server</code></pre><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class=" language-bash"><code class="language-bash">$ hexo generate</code></pre><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class=" language-bash"><code class="language-bash">$ hexo deploy</code></pre><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+  
+  
+</search>

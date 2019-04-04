@@ -4,8 +4,18 @@
 
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="Hello World, Hexo">
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex">
+    <meta name="keywords" content="自定义View—综述, Hexo">
+    <meta name="description" content="
+自定义绘制的方式主要是重写绘制方法，常用的就是onDraw()
+
+关键点在于Canvas的使用，包括Paint和canvas.draw…
+
+
+自定义绘制的四个级别将自定义绘制分为四个级别来学习：
+
+Canvas的drawXX()方法
+
+C">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +23,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Hello World | Hexo</title>
+    <title>自定义View—综述 | Hexo</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -257,13 +267,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        Hello World
+                        自定义View—综述
                     </div>
                 </div>
             </div>
@@ -372,9 +382,13 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/Android-自定义-View/" target="_blank">
+                                <span class="chip bg-color">Android 自定义 View</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -385,14 +399,14 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-02-27
+                    2019-03-26
                 </div>
 
                 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        73
+                        177
                     </div>
                     
 
@@ -415,19 +429,28 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class=" language-bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span>
-</code></pre>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class=" language-bash"><code class="language-bash">$ hexo server
-</code></pre>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class=" language-bash"><code class="language-bash">$ hexo generate
-</code></pre>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class=" language-bash"><code class="language-bash">$ hexo deploy
-</code></pre>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+                <ul>
+<li><p>自定义绘制的方式主要是重写绘制方法，常用的就是onDraw()</p>
+</li>
+<li><p>关键点在于Canvas的使用，包括Paint和canvas.draw…</p>
+</li>
+</ul>
+<h5 id="自定义绘制的四个级别"><a href="#自定义绘制的四个级别" class="headerlink" title="自定义绘制的四个级别"></a>自定义绘制的四个级别</h5><p>将自定义绘制分为四个级别来学习：</p>
+<ul>
+<li>Canvas的drawXX()方法</li>
+</ul>
+<p>Canvas的drawXX()方法是自定义绘制的基本，主要包括如何画线、形状、文字等，配合Paint的一些基本设置（颜色、线条风格等）就可以满足最基本的挥之需求；</p>
+<ul>
+<li>Paint的使用</li>
+</ul>
+<p>Paint的作用很多，常用的包括控制颜色、线条粗细、实心空心、阴影等效果；</p>
+<ul>
+<li><p>Canvas对绘制的辅助—范围裁切和几何变换</p>
+</li>
+<li><p>控制绘制的顺序</p>
+</li>
+</ul>
+<p>#### </p>
 
             </div>
             <hr>
@@ -575,7 +598,7 @@
                     </span>
                     <a href="http://myxiao7.github.io" class="b-link-green">Hexo</a>
                     <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
-                    <a href="/2019/02/27/hello-world/" class="b-link-green">Hello World</a>
+                    <a href="/2019/03/26/zi-ding-yi-view-ji-chu-pian/" class="b-link-green">自定义View—综述</a>
                 </p>
             </div>
         </div>
@@ -598,7 +621,60 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2019/03/26/zi-ding-yi-view-ji-chu-pian/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="自定义View—综述">
+                        
+                        <span class="card-title">自定义View—综述</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary">
+自定义绘制的方式主要是重写绘制方法，常用的就是onDraw()
+
+关键点在于Canvas的使用，包括Paint和canvas.draw…
+
+
+自定义绘制的四个级别将自定义绘制分为四个级别来学习：
+
+Canvas的drawXX()方法
+
+C</div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-03-26
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-user fa-fw"></i>
+                            John Doe
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Android-自定义-View/" target="_blank">
+                        <span class="chip bg-color">Android 自定义 View</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
+            </div>
             <div class="card">
                 <a href="/2019/02/27/ru-he-li-yong-github-pages-da-jian-ge-ren-bo-ke/">
                     <div class="card-image">
@@ -616,39 +692,6 @@
 ​        
 </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-02-27
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fa fa-user fa-fw"></i>
-                            John Doe
-                            
-                        </span>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="fa fa-dot-circle-o"></i>
-            </div>
-            <div class="card">
-                <a href="/2019/02/27/hello-world/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
-                        
-                        <span class="card-title">Hello World</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary">Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex</div>
-                    <div class="publish-info">
                             <span class="publish-date">
                                 <i class="fa fa-clock-o fa-fw icon-date"></i>2019-02-27
                             </span>
@@ -660,7 +703,6 @@
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>
