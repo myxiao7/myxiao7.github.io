@@ -4,12 +4,11 @@
 
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="如何利用Github Pages搭建个人博客, Hexo">
-    <meta name="description" content="前期准备：github账号：https://github.com/
-​        github客户端：
-​        git：
-​        
-">
+    <meta name="keywords" content="自定义View 绘制基础, Hexo">
+    <meta name="description" content="最基础的方法：onDraw()重写onDraw()方法，绘制代码写在里面，最基本的绘制就实现了：
+Paint paint = new Paint();
+ @Override
+    protected void onDraw(Canvas ">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +16,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>如何利用Github Pages搭建个人博客 | Hexo</title>
+    <title>自定义View 绘制基础 | Hexo</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -261,13 +260,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/10.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        如何利用Github Pages搭建个人博客
+                        自定义View 绘制基础
                     </div>
                 </div>
             </div>
@@ -376,9 +375,13 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/Android-自定义-View/" target="_blank">
+                                <span class="chip bg-color">Android 自定义 View</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -389,14 +392,14 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-02-27
+                    2019-04-04
                 </div>
 
                 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        15
+                        76
                     </div>
                     
 
@@ -419,11 +422,18 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>前期准备：github账号：<a href="https://github.com/" target="_blank" rel="noopener">https://github.com/</a></p>
-<p>​        github客户端：</p>
-<p>​        git：</p>
-<p>​        </p>
-
+                <h2 id="最基础的方法：onDraw"><a href="#最基础的方法：onDraw" class="headerlink" title="最基础的方法：onDraw()"></a>最基础的方法：onDraw()</h2><p>重写onDraw()方法，绘制代码写在里面，最基本的绘制就实现了：</p>
+<pre class=" language-java"><code class="language-java">Paint paint <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Paint</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+ <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">protected</span> <span class="token keyword">void</span> <span class="token function">onDraw</span><span class="token punctuation">(</span>Canvas canvas<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">onDraw</span><span class="token punctuation">(</span>canvas<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        paint<span class="token punctuation">.</span><span class="token function">setStyle</span><span class="token punctuation">(</span>Paint<span class="token punctuation">.</span>Style<span class="token punctuation">.</span>FILL<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">//绘制一个矩形</span>
+        canvas<span class="token punctuation">.</span><span class="token function">drawRect</span><span class="token punctuation">(</span><span class="token number">200</span><span class="token punctuation">,</span><span class="token number">200</span><span class="token punctuation">,</span><span class="token number">400</span><span class="token punctuation">,</span><span class="token number">400</span><span class="token punctuation">,</span> paint<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+</code></pre>
+<p>重点：不要忘了 super.onDraw(canvas)。</p>
+<h2 id="Paint基础"><a href="#Paint基础" class="headerlink" title="Paint基础"></a>Paint基础</h2><h2 id="Canvas-drawXXX-方法"><a href="#Canvas-drawXXX-方法" class="headerlink" title="Canvas.drawXXX()方法"></a>Canvas.drawXXX()方法</h2>
             </div>
             <hr>
 
@@ -570,7 +580,7 @@
                     </span>
                     <a href="http://myxiao7.github.io" class="b-link-green">Hexo</a>
                     <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
-                    <a href="/2019/02/27/ru-he-li-yong-github-pages-da-jian-ge-ren-bo-ke/" class="b-link-green">如何利用Github Pages搭建个人博客</a>
+                    <a href="/2019/04/04/zi-ding-yi-view-hui-zhi-ji-chu/" class="b-link-green">自定义View 绘制基础</a>
                 </p>
             </div>
         </div>
@@ -593,7 +603,53 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2019/04/04/zi-ding-yi-view-hui-zhi-ji-chu/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="自定义View 绘制基础">
+                        
+                        <span class="card-title">自定义View 绘制基础</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary">最基础的方法：onDraw()重写onDraw()方法，绘制代码写在里面，最基本的绘制就实现了：
+Paint paint = new Paint();
+ @Override
+    protected void onDraw(Canvas </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-04-04
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-user fa-fw"></i>
+                            John Doe
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Android-自定义-View/" target="_blank">
+                        <span class="chip bg-color">Android 自定义 View</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
+            </div>
             <div class="card">
                 <a href="/2019/03/26/zi-ding-yi-view-ji-chu-pian/">
                     <div class="card-image">
@@ -617,9 +673,9 @@ Canvas的drawXX()方法
 
 C</div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-03-26
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-03-26
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-user fa-fw"></i>
@@ -635,39 +691,6 @@ C</div>
                         <span class="chip bg-color">Android 自定义 View</span>
                     </a>
                     
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2019/02/27/hello-world/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
-                        
-                        <span class="card-title">Hello World</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary">Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex</div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-02-27
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fa fa-user fa-fw"></i>
-                            John Doe
-                            
-                        </span>
-                    </div>
                 </div>
                 
             </div>
